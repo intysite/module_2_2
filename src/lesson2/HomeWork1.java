@@ -1,6 +1,9 @@
 package lesson2;
 
 import lesson2.task1.*;
+import lesson2.task2.MyList;
+
+import java.util.List;
 
 public class HomeWork1 {
     public static void main(String[] args) {
@@ -34,9 +37,13 @@ public class HomeWork1 {
         //Задача №2
         //Создать класс MyList с атрибутами T[] objects, int size. T - generics.
         //Массив T[] будет создаваться при создании экземпляра класса MyList с размерностью 3.
-        //Создать метод add. Он будет добавлять элемент в массив object. Если в массиве уже 3 элемента есть, то нужно:
+        //Создать метод add. Он будет добавлять элемент в массив objects. Если в массиве уже 3 элемента есть, то нужно:
         //1.Создать новый массив T[] с размерностью в два раза больше предыдущей.
         //2.Скопировать со старого массива все значения в новый
         //3.Присвоить экземпляру MyList новый массив.
+
+        MyList<String> objectMyList = new MyList<>();
+        objectMyList.add("O kak");
+        System.out.println(objectMyList);
     }
 }
