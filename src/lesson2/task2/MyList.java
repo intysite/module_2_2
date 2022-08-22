@@ -26,8 +26,8 @@ public class MyList<T> {
 
     @Override
     public String toString() {
-        return "MyList{" +
-                "objects=" + Arrays.toString(objects) +
+        return "MyList {" +
+                "objects = " + Arrays.toString(objects) +
                 '}';
     }
 }
