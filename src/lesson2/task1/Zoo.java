@@ -5,9 +5,9 @@ public class Zoo<K extends Flyable, T extends Swimable, V extends Bitable> {
     private T swimmingAnimal;
     private V bitingAnimal;
 
-    public Zoo(K flyingAnimal, T animal2, V bitingAnimal) {
+    public Zoo(K flyingAnimal, T swimmingAnimal, V bitingAnimal) {
         this.flyingAnimal = flyingAnimal;
-        this.swimmingAnimal = animal2;
+        this.swimmingAnimal = swimmingAnimal;
         this.bitingAnimal = bitingAnimal;
     }
 

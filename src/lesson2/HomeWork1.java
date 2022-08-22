@@ -1,6 +1,6 @@
 package lesson2;
 
-import lesson2.task1.Dolphin;
+import lesson2.task1.*;
 
 public class HomeWork1 {
     public static void main(String[] args) {
@@ -19,8 +19,17 @@ public class HomeWork1 {
         //Создать 2 экземпляра зоопарка и распределить животных по зоопаркам.
         //Никаких проверок if instanceof быть не должно, и внутри Zoo будут лежать Generics, а не интерфейсы.
 
+        Eagle eagle = new Eagle();
+        Sparrow sparrow = new Sparrow();
         Dolphin dolphin = new Dolphin();
-        System.out.println(dolphin);
+        Shark shark = new Shark();
+        Tiger tiger = new Tiger();
+        Wolf wolf = new Wolf();
+        Zoo<Eagle, Dolphin, Tiger> zoo1 = new Zoo<>(eagle, dolphin, tiger);
+        Zoo<Sparrow, Shark, Wolf> zoo2 = new Zoo<>(sparrow, shark, wolf);
+        zoo1.feedFlyable();
+        zoo2.feedSwimable();
+        zoo2.feedBitable();
 
         //Задача №2
         //Создать класс MyList с атрибутами T[] objects, int size. T - generics.
