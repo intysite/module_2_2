@@ -5,4 +5,9 @@ public class Wolf implements Bitable {
     public void bite() {
         System.out.println("Волк кусает");
     }
+
+    @Override
+    public String toString() {
+        return "Волк";
+    }
 }

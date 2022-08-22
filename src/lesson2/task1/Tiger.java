@@ -5,4 +5,9 @@ public class Tiger implements Bitable {
     public void bite() {
         System.out.println("Тигр кусает");
     }
+
+    @Override
+    public String toString() {
+        return "Тигр";
+    }
 }

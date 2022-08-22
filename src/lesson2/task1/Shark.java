@@ -5,4 +5,9 @@ public class Shark implements Swimable {
     public void swim() {
         System.out.println("Акула плывет");
     }
+
+    @Override
+    public String toString() {
+        return "Акула";
+    }
 }

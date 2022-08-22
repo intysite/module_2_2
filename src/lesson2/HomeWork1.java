@@ -1,5 +1,7 @@
 package lesson2;
 
+import lesson2.task1.Dolphin;
+
 public class HomeWork1 {
     public static void main(String[] args) {
         //Задача №1
@@ -16,6 +18,9 @@ public class HomeWork1 {
         //Создать по одному экземпляру на каждый класс.
         //Создать 2 экземпляра зоопарка и распределить животных по зоопаркам.
         //Никаких проверок if instanceof быть не должно, и внутри Zoo будут лежать Generics, а не интерфейсы.
+
+        Dolphin dolphin = new Dolphin();
+        System.out.println(dolphin);
 
         //Задача №2
         //Создать класс MyList с атрибутами T[] objects, int size. T - generics.

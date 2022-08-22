@@ -5,4 +5,9 @@ public class Sparrow implements Flyable {
     public void fly() {
         System.out.println("Воробей летит");
     }
+
+    @Override
+    public String toString() {
+        return "Воробей";
+    }
 }

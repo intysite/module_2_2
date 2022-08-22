@@ -5,4 +5,9 @@ public class Eagle implements Flyable {
     public void fly() {
         System.out.println("Орёл летит");
     }
+
+    @Override
+    public String toString() {
+        return "Орёл";
+    }
 }
