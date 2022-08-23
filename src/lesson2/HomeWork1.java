@@ -3,8 +3,6 @@ package lesson2;
 import lesson2.task1.*;
 import lesson2.task2.MyList;
 
-import java.util.List;
-
 public class HomeWork1 {
     public static void main(String[] args) {
         //Задача №1
