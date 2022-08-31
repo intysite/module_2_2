@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class HomeWork2 {
@@ -51,10 +50,18 @@ public class HomeWork2 {
         // 2. Вывести на экран все элементы
         // Ожидаемый результат: 3,4,5,1,2
 
+        lists.stream()
+                .sorted((x, y) -> y.size() - x.size())
+                .flatMap(Collection::stream)
+                .forEach(System.out::println);
 
         //Задача №3
         // 1. Узнать, есть ли в lists хотя бы один список, который содержит сумму всех элементов вложенного листа
         // равную 12
 
+        boolean isHasTwenty = lists.stream()
+                .map(e -> e.stream().reduce(Integer::sum).orElse(0))
+                .anyMatch(e -> e == 12);
+        System.out.println(isHasTwenty);
     }
 }
