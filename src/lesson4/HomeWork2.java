@@ -1,7 +1,11 @@
 package lesson4;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class HomeWork2 {
     public static void main(String[] args) {
@@ -30,11 +34,23 @@ public class HomeWork2 {
         // Ожидаемый результат вывода на экран:
         // 1120 - из примера, 0 - при пустом листе
 
-        List<List<Integer>> lists = List.of(List.of(1, 2), List.of(3, 4, 5), List.of());
+        integers.stream()
+                .filter(e -> e > 4)
+                .distinct()
+                .map(User::new)
+                .map(e -> e.setList(Stream.generate(() -> random.nextInt(10)).limit(e.getUserId()).collect(Collectors.toList())))
+                .flatMap(e -> e.getList().stream())
+                .map(e -> e * 10)
+                .reduce(Integer::sum)
+                .ifPresentOrElse(System.out::println, () -> System.out.println(0));
+
         //Задача №2
+        List<List<Integer>> lists = List.of(List.of(1, 2), List.of(3, 4, 5), List.of());
+
         // 1. Отсортировать список lists так, чтобы сначала были самые большие списки по размеру
         // 2. Вывести на экран все элементы
         // Ожидаемый результат: 3,4,5,1,2
+
 
         //Задача №3
         // 1. Узнать, есть ли в lists хотя бы один список, который содержит сумму всех элементов вложенного листа
