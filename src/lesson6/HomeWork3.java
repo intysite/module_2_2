@@ -20,9 +20,7 @@ public class HomeWork3 {
         hashUser.add(vanya);
         hashUser.add(petya);
         hashUser.add(vanya1);
-        for (User user : hashUser) {
-            System.out.println(user);
-        }
+        hashUser.forEach(System.out::println);
 
         //Задача №2
         //1. Создать класс UserBroken, с двумя атрибутами - int age, String name
@@ -30,7 +28,15 @@ public class HomeWork3 {
         //3. Переопределить hashcode и equals так, чтобы при вставке любого юзера в HashSet,
         // в hashSet всегда оставался один юзер
 
+        UserBroken user1 = new UserBroken(30, "Onotole");
+        UserBroken user2 = new UserBroken(44, "Klava");
+        UserBroken user3 = new UserBroken(19, "Ololo");
 
+        HashSet<UserBroken> users = new HashSet<>();
+        users.add(user1);
+        users.add(user2);
+        users.add(user3);
+        users.forEach(System.out::println);
 
 
         //Задача №3
