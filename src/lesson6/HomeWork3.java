@@ -1,5 +1,6 @@
 package lesson6;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class HomeWork3 {
@@ -38,14 +39,20 @@ public class HomeWork3 {
         users.add(user3);
         users.forEach(System.out::println);
 
-
         //Задача №3
         //1. Создать класс CarBroken
         //2. Создать экземпляр класса HashMap<CarBroken, Integer>
         //3. Переопределить hashcode и equals так, чтобы при вставке любого CarBroken в HashMap,
         //всегда CarBroken попадал в один бакет.
 
-
+        CarBroken car1 = new CarBroken();
+        CarBroken car2 = new CarBroken();
+        CarBroken car3 = new CarBroken();
+        HashMap<CarBroken, Integer> carBrokenMap = new HashMap<>();
+        carBrokenMap.put(car1, 1);
+        carBrokenMap.put(car2, 2);
+        carBrokenMap.put(car3, 3);
+        System.out.println(carBrokenMap);
 
     }
 }
