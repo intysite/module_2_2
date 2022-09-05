@@ -5,4 +5,5 @@ public class CarBroken {
     public int hashCode() {
         return 381;
     }
+
 }
