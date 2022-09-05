@@ -13,7 +13,7 @@ public class HomeWork3 {
         User vasya = new User(20, "Vasya");
         User vanya = new User(25, "Vanya");
         User petya = new User(25, "Petya");
-        User vanya1 = new User(25, "Vanya");
+        User vanya1 = new User(26, "Vanya");
 
         HashSet<User> hashUser = new HashSet<User>();
         hashUser.add(vasya);
@@ -41,9 +41,11 @@ public class HomeWork3 {
 
         //Задача №3
         //1. Создать класс CarBroken
-        //2. Создать экземпляра класса HashMap<CarBroken, Integer>
+        //2. Создать экземпляр класса HashMap<CarBroken, Integer>
         //3. Переопределить hashcode и equals так, чтобы при вставке любого CarBroken в HashMap,
         //всегда CarBroken попадал в один бакет.
+
+
 
     }
 }
