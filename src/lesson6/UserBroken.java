@@ -13,8 +13,9 @@ public class UserBroken {
 
     @Override
     public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
         return true;
-        }
+    }
 
     @Override
     public int hashCode() {
