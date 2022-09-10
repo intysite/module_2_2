@@ -13,7 +13,6 @@ public class UserBroken {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || this.getClass() != o.getClass()) return false;
         return true;
     }
 
