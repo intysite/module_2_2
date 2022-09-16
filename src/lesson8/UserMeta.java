@@ -1,6 +1,7 @@
 package lesson8;
-
+@GetMetaData
 public class UserMeta {
+    @GetMetaData
     private String name;
     private Integer count;
 

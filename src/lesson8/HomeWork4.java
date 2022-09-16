@@ -1,5 +1,6 @@
 package lesson8;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -15,14 +16,37 @@ public class HomeWork4 {
 
         UserMeta aleshka = new UserMeta("Aleshka", 48);
 
-        for (Method declaredMethod : aleshka.getClass().getDeclaredMethods()) {
+        getClassFields(aleshka);
+        getValues(aleshka);
+        getMethodTime(aleshka);
+
+    }
+    static void getClassFields(UserMeta userMeta) {
+        if(userMeta.getClass().isAnnotationPresent(GetMetaData.class)){
+            for (Field declaredField : userMeta.getClass().getDeclaredFields()) {
+                declaredField.setAccessible(true);
+                System.out.println(declaredField.getName());
+            }
+        }
+    }
+
+    static void getValues(UserMeta userMeta) throws IllegalAccessException {
+        for (Field declaredField : userMeta.getClass().getDeclaredFields()) {
+            if(declaredField.isAnnotationPresent(GetMetaData.class)) {
+                declaredField.setAccessible(true);
+                System.out.println(declaredField.get(userMeta));
+            }
+        }
+    }
+
+    static void getMethodTime(UserMeta userMeta) throws InvocationTargetException, IllegalAccessException {
+        for (Method declaredMethod : userMeta.getClass().getDeclaredMethods()) {
             if(declaredMethod.isAnnotationPresent(GetMetaData.class)) {
                 long start = System.currentTimeMillis();
-                declaredMethod.invoke(aleshka, "Mr");
+                declaredMethod.invoke(userMeta, "Mr");
                 long end = System.currentTimeMillis();
                 System.out.println(end - start);
             }
         }
-
     }
 }
